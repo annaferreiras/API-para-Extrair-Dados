@@ -1,6 +1,6 @@
-# 🧠 Proof of Concept — Sistema de Leitura e Extração de Dados de Documentos
+# Proof of Concept — Sistema de Leitura e Extração de Dados de Documentos
 
-## 📄 Descrição do Projeto
+## Descrição do Projeto
 
 Este projeto tem como objetivo **demonstrar a viabilidade de um sistema automatizado de leitura e extração de dados de documentos**, combinando **Large Language Models (LLMs)** com outras ferramentas auxiliares de **processamento de imagem** e **reconhecimento óptico de caracteres (OCR)**.
 
@@ -8,7 +8,7 @@ O sistema foi desenvolvido para interpretar **documentos complexos** e obter **i
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 
 - Comprovar a viabilidade técnica da integração entre **LLMs**, **OCR**, **pré-processamento de imagem** e **técnicas de chunking**.  
 - Criar um pipeline capaz de **extrair dados estruturados** de documentos não estruturados.  
@@ -16,9 +16,9 @@ O sistema foi desenvolvido para interpretar **documentos complexos** e obter **i
 
 ---
 
-## 🧩 Arquitetura e Componentes
+## Arquitetura e Componentes
 
-### 🧠 Large Language Model (LLM)
+### Large Language Model (LLM)
 
 - **Modelo estudado:** `Llama 3.2-1B`  
 - **Modelo utilizado:** `Llama 3.3-70B-Versatile` (via **Groq**)  
@@ -27,7 +27,7 @@ O sistema foi desenvolvido para interpretar **documentos complexos** e obter **i
 
 ---
 
-### 🔤 Reconhecimento Óptico de Caracteres (OCR)
+### Reconhecimento Óptico de Caracteres (OCR)
 
 Foram utilizados **dois mecanismos de OCR** para leitura dos documentos:
 
@@ -38,7 +38,7 @@ Foram utilizados **dois mecanismos de OCR** para leitura dos documentos:
 
 ---
 
-### 🖼️ Pré-processamento de Imagem
+### Pré-processamento de Imagem
 
 Antes da leitura por OCR, foi utilizado o **OpenCV** para:
 
@@ -50,13 +50,13 @@ Essas etapas aumentam significativamente a precisão do OCR, especialmente em im
 
 ---
 
-### 📚 Processamento de PDFs
+### Processamento de PDFs
 
 Para lidar com **documentos em PDF** e **preservar o layout de tabelas**, foi utilizada a biblioteca **PyMuPDF**, que permite extrair texto mantendo a estrutura visual — ao contrário de OCRs tradicionais.
 
 ---
 
-### 🧱 Chunking
+### Chunking
 
 Foi implementado um processo de **divisão de texto (chunking)** para controlar o número de tokens enviados à LLM.  
 Essa etapa é essencial para:
@@ -79,7 +79,7 @@ Essa biblioteca permite:
 
 ---
 
-### ⚙️ API — FASTAPI
+### API — FASTAPI
 
 Foi desenvolvida uma **API REST** utilizando o framework **FastAPI**, responsável por:
 
@@ -89,7 +89,7 @@ Foi desenvolvida uma **API REST** utilizando o framework **FastAPI**, responsáv
 
 ---
 
-### 💬 Chatbot Inteligente
+### Chatbot Inteligente
 
 O sistema inclui um **chatbot** conectado à LLM, que permite **consultas contextuais** sobre os documentos já extraídos.  
 Exemplo:  
